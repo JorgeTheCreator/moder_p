@@ -27,3 +27,33 @@ $background-opacity: 0.8;
     }
   }
 }
+
+//  Media  Query Mixins
+
+// this code will be applied if the screen size is 500px or less
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// this code will be applied if the screen size is 760px or under
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// this code will be applied if the screen size is  between 769px to 1170px
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+// this code will be applied if the screen size 1171px or over
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
